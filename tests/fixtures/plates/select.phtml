@@ -1,0 +1,10 @@
+<div class="input-field">
+    <select <?=$attributesHtml?>>
+    <?php foreach ($options as $k => $v): ?>
+        <option <?=($k===$selected)?'selected ':''?><?=empty($k)?'disabled':'value="'.$this->e($k).'"'?>><?=$this->e($v)?></option>
+    <?php endforeach ?>
+    </select>
+    <label for="<?=$this->e($id)?>"><?=$this->e($label)?></label>
+    <p class="error"><?=$this->e($error)?></p>
+    <p class="help"><?=$this->e($help)?></p>
+</div>

@@ -1,0 +1,15 @@
+<?php 
+    // The implementation simply inherits input, but 
+    // we may choose to render radio DOM differently, 
+    // if we really need to. In this example, we keep 
+    // the same DOM as input, and rely on CSS to do the 
+    // heavy lifting.
+
+    $this->insert('form::input', [
+        'id' => $id,
+        'attributesHtml'=>$attributesHtml,
+        'label' => $label, 
+        'error' => $error,
+        'help' => $help
+    ]) 
+?>

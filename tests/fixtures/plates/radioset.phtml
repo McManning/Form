@@ -1,0 +1,8 @@
+<div <?=$attributesHtml?>>
+<?php foreach ($elements as $element): ?>
+    <?=$element?>
+<?php endforeach ?>
+    <label for="<?=$this->e($id)?>"><?=$this->e($label)?></label>
+    <p class="error"><?=$this->e($error)?></p>
+    <p class="help"><?=$this->e($help)?></p>
+</div>
