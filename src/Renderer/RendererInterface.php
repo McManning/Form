@@ -5,7 +5,7 @@ namespace McManning\Form\Renderer;
 use McManning\Form\Element;
 
 /**
- * 
+ *
  */
 interface RendererInterface
 {

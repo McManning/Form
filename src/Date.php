@@ -7,7 +7,7 @@ use McManning\Form\Renderer\RendererInterface;
 /**
  * HTML5 date input.
  *
- * For browsers that do not support input[type=date], 
+ * For browsers that do not support input[type=date],
  * a polyfill Javascript library is used to provide
  * a date picker.
  */

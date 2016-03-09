@@ -3,18 +3,18 @@
 namespace McManning\Form;
 
 /**
- * 
+ *
  *
  */
 class Select extends Element
 {
     /**
      * Selected option value (key in $this->options)
-     * 
+     *
      * @var string
      */
     protected $selected = '';
-    
+
     /**
      * Mapping of option[value] to display text
      *
@@ -77,7 +77,7 @@ class Select extends Element
                 $attrs[] = 'selected';
             }
 
-            // Options without a value are disabled 
+            // Options without a value are disabled
             if (!empty($k)) {
                 $attrs[] = 'value="'.$k.'"';
             } else {

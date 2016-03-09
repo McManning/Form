@@ -7,8 +7,8 @@ use McManning\Form\Renderer\RendererInterface;
 /**
  * Basic factory class for constructing form elements.
  *
- * This is an abstraction layer that handles dependency 
- * injection for all form elements, thus relieving the 
+ * This is an abstraction layer that handles dependency
+ * injection for all form elements, thus relieving the
  * end user developer from having to specify DI's for
  * each element (unless they want to).
  *
@@ -37,13 +37,13 @@ class Factory
     {
         $this->renderer = $renderer;
     }
-    
+
     /**
-     * Construct an element through the factory. 
-     * 
+     * Construct an element through the factory.
+     *
      * Method name will map to McManning\Form\[method]
-     * 
-     * @throws \ReflectionException if the element cannot be constructed 
+     *
+     * @throws \ReflectionException if the element cannot be constructed
      *                              through the factory (i.e. does not exist)
      */
     public function __call($method, array $args)

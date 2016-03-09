@@ -6,7 +6,7 @@ use McManning\Form\Renderer\RendererInterface;
 
 /**
  * Simple radio
- * 
+ *
  * As should be expected, radio groups are specified
  * by the `name` attribute.
  */

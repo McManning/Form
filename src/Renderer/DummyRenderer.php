@@ -7,8 +7,8 @@ use McManning\Form\Element;
 
 /**
  * Dummy to spit out a simple representation of the element being rendered
- * 
- * Usage: 
+ *
+ * Usage:
  * <code>
  *  $renderer = new DummyRenderer();
  *  $textarea = new Textarea($renderer);
@@ -25,10 +25,10 @@ class DummyRenderer implements RendererInterface
         // Dump some basic info about it
         return sprintf(
             "<%s label='%s' help='%s' error='%s' attributes='%s'>",
-            $class, 
-            $e->label, 
-            $e->help, 
-            $e->error, 
+            $class,
+            $e->label,
+            $e->help,
+            $e->error,
             json_encode($e->attributes)
         );
     }

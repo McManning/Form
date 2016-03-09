@@ -8,10 +8,13 @@
             "email": "cmcmanning@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=5.4"
+    },
     "require-dev": {
         "phpunit/phpunit": "4.0.*",
-        "league/plates": "^3.1"
+        "league/plates": "^3.1",
+        "squizlabs/php_codesniffer": "^2.5"
     },
     "autoload": {
         "psr-4": {

@@ -4,7 +4,7 @@ namespace McManning\Form;
 
 /**
  * Group of McManning\Form\Radio elements.
- * 
+ *
  * This provides shortcut methods for generating radio
  * buttons en-masse.
  *

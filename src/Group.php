@@ -7,9 +7,9 @@ use McManning\Form\Renderer\RendererInterface;
 /**
  * Container of multiple arbitrary Elements
  *
- * A group is not much more than a div with it's own 
+ * A group is not much more than a div with it's own
  * help/label/error display fields. A group may contain
- * any set of additional elements. 
+ * any set of additional elements.
  *
  * Rendering a group will cascade render all contained elements.
  *
@@ -39,7 +39,7 @@ class Group extends Element implements \Iterator
     /**
      * @see \Iterator::rewind
      */
-    function rewind() 
+    public function rewind()
     {
         $this->position = 0;
     }
@@ -47,7 +47,7 @@ class Group extends Element implements \Iterator
     /**
      * @see \Iterator::current
      */
-    function current() 
+    public function current()
     {
         return $this->elements[$this->position];
     }
@@ -55,7 +55,7 @@ class Group extends Element implements \Iterator
     /**
      * @see \Iterator::key
      */
-    function key() 
+    public function key()
     {
         return $this->position;
     }
@@ -63,7 +63,7 @@ class Group extends Element implements \Iterator
     /**
      * @see \Iterator::next
      */
-    function next() 
+    public function next()
     {
         ++$this->position;
     }
@@ -71,13 +71,13 @@ class Group extends Element implements \Iterator
     /**
      * @see \Iterator::valid
      */
-    function valid() 
+    public function valid()
     {
         return isset($this->elements[$this->position]);
     }
 
     /**
-     * Add an element to the group. 
+     * Add an element to the group.
      *
      * @param McManning\Form\Element $element to add
      *

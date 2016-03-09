@@ -5,7 +5,7 @@ namespace McManning\Form;
 use McManning\Form\Renderer\RendererInterface;
 
 /**
- * Common structure of a form element. 
+ * Common structure of a form element.
  *
  * All form elements share a particular set of properties;
  * an id, displayed label, displayed help text, displayed error,
@@ -44,7 +44,7 @@ abstract class Element
 
     /**
      * Element ID
-     * 
+     *
      * @var string
      */
     protected $id = '';
@@ -81,10 +81,10 @@ abstract class Element
      *
      * If parameters is a single boolean true, the attribute is
      * added with no value (equivalent to parameters being empty).
-     * This is ideal for attributes like `checked`, `readonly`, 
+     * This is ideal for attributes like `checked`, `readonly`,
      * `disabled`, etc. Boolean false as input, however, will unset
-     * the attribute specified by the method. 
-     * 
+     * the attribute specified by the method.
+     *
      * Example:
      *      ->checked() is equivalent to ->checked(true)
      *      ->checked(false) will remove the checked attr
@@ -98,7 +98,7 @@ abstract class Element
         } else {
             $this->attributes[$method] = implode(' ', $parameters);
         }
-        
+
         return $this;
     }
 
@@ -111,7 +111,7 @@ abstract class Element
     {
         // Try-catch is here as PHP does not allow __toString
         // to throw exceptions. So instead, we convert it to
-        // a string before throwing. 
+        // a string before throwing.
         try {
             return (string)$this->render();
         } catch (\Exception $e) {
@@ -168,7 +168,7 @@ abstract class Element
     /**
      * Binds to apply to the template during render.
      *
-     * Override to implement additional binds for an inherited 
+     * Override to implement additional binds for an inherited
      * element that may contain additional (unique) properties
      *
      * @return array
@@ -188,7 +188,7 @@ abstract class Element
 
     /**
      * Map data-attr to a value.
-     * 
+     *
      * This is here because we can't utilize magic methods due
      * to the dash, and to make it explicit that these are setting
      * special HTML5 data attributes.
@@ -222,8 +222,8 @@ abstract class Element
      *
      * Example:
      * <code>
-     *   // Call chain 
-     *   ->class('foo', 'bar')->value('foo')->disabled() 
+     *   // Call chain
+     *   ->class('foo', 'bar')->value('foo')->disabled()
      *
      *   // Resulting string
      *   class="foo bar" value="foo" disabled
@@ -240,8 +240,8 @@ abstract class Element
             } else {
                 $attributes[] = $k.'="'.
                     htmlspecialchars(
-                        $v, 
-                        ENT_QUOTES | ENT_SUBSTITUTE, 
+                        $v,
+                        ENT_QUOTES | ENT_SUBSTITUTE,
                         'UTF-8'
                     ).'"';
             }

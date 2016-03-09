@@ -25,19 +25,4 @@ class Textarea extends Element
             'text' => $this->text
         ]);
     }
-
-    // public function render()
-    // {
-    //     $html = '<div class="input-field">' .
-    //                 '<textarea '.$this->attributesHtml().'>' .
-    //                     $this->text . 
-    //                 '</textarea>' .
-    //                 '<label for="'.$this->id.'">' . 
-    //                     $this->label . 
-    //                 '</label>' .
-    //                 '<p class="error">'.$this->error.'</p>' .
-    //                 '<p class="help">'.$this->help.'</p>' .
-    //             '</div>';
-    //     return $html;
-    // }
 }

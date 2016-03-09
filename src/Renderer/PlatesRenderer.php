@@ -7,7 +7,7 @@ use McManning\Form\Renderer\RendererInterface;
 use McManning\Form\Element;
 
 /**
- * Usage: 
+ * Usage:
  * <code>
  *  $engine = new League\Plates\Engine(...);
  *  $engine->addFolder('form', '/path/to/form/views')
