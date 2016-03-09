@@ -3,6 +3,13 @@
 
 A lightweight approach for implementing form widget abstraction within PHP applications. 
 
+## Benefits
+* Uses established HTML5 naming conventions for modifying widget attributes to reduce API complexity
+* UI framework agnostic. Follows MVC separation of concerns to keep view templates separate from form models
+* View engine agnostic. Ships with support for [league/plates](https://github.com/thephpleague/plates) but may utilize any other view engine for rendering
+* No globals, no singletons. Follows modern DI patterns for testable code
+* PSR-1, PSR-2, and PSR-4 compliant
+
 ## Installation
 
 Via Composer:
@@ -64,6 +71,11 @@ $ phpunit
 ## Contributing
 
 Pull requests welcome.
+
+Ensure code follows basic PSR-1, PSR-2 guidelines:
+```
+$ phpcs --standard=PSR1,PSR2 src/
+```
 
 ## License
 
